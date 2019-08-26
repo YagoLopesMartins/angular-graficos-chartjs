@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { User } from './models/User';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-projeto-graficos';
+  users: User[];
+
+  constructor(private userService: UserService) {
+
+  }
+
+  ngOnInit() {
+    // this.userService.getUsers().subscribe();
+  }
 }
